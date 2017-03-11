@@ -8,15 +8,16 @@
 
 //A caption to overlay
 
-
+var $overlay = $('<div id="overlay"></div>');
 //Add overlay
+$("body").append($overlay);
 
 
 //Capture the click event on a link to an image
 $("#imageGallery a").click(function(event) {
   event.preventDefault();
   var href = $(this).attr("href");
-  console.log(href);
+  $overlay.show();
 });
 
   //Update overlay with the image linked in the link
